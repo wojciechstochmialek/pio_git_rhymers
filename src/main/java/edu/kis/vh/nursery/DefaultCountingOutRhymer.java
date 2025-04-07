@@ -8,7 +8,11 @@ public class DefaultCountingOutRhymer {
     private static final int FULL = NUMBERS_CAPACITY - 1;
     private final int[] numbers = new int[NUMBERS_CAPACITY];
 
-    public int total = EMPTY;
+    private int getTotal() {
+        return total;
+    }
+
+    private int total = EMPTY;
 
     public void countIn(int in) {
         if (!isFull())
