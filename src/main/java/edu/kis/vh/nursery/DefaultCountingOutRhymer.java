@@ -20,7 +20,7 @@ public class DefaultCountingOutRhymer {
     private static final int FULL = NUMBERS_CAPACITY - 1;
     private final int[] numbers = new int[NUMBERS_CAPACITY];
 
-    public int total = EMPTY;
+    private int total = EMPTY;
     /**
      * Dodaje liczbę na stos.
      *
@@ -28,6 +28,14 @@ public class DefaultCountingOutRhymer {
      * na stosie, takie jak usuwanie liczb w kolejności LIFO.
      *
      */
+
+    private int getTotal() {
+        return total;
+    }
+
+    
+
+
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
